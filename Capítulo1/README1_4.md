@@ -93,7 +93,7 @@ La siguiente captura muestra el resultado de la ejecución del Job llamado crud-
 * Build exitoso (ícono verde)
 * Duración total: 39 segundos
 * Usuario: Netec
-* Código fuente clonado desde el repositorio: ttps://github.com/NetecGit/TallerDevOpsBancolombia
+* Código fuente clonado desde el repositorio: https://github.com/NetecGit/TallerDevOpsBancolombia
 * Rama usada: practica1.4/jenkins_jobs_pipelines
 * Último commit registrado como “Taller DevOps - commit inicial”
 
