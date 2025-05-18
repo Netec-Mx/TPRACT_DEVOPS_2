@@ -36,6 +36,8 @@ mvn -version
 
 ---
 
+<br/>
+
 ## Job 1: **Estilo Libre (Freestyle Job)**
 
 ### Objetivo de este Job:
@@ -74,7 +76,7 @@ ls -lh target/*.jar
 <br/>
 
 
-## Resultado Esperado
+### Resultado Esperado
 
 * La siguiente captura muestra la interfaz principal de Jenkins tras iniciar sesión como el usuario netec.Además, se confirma que Jenkins está correctamente instalado y corriendo en http://localhost:8080.
 
@@ -108,8 +110,8 @@ ls -lh target/*.jar
 <br/>
 
 ---
-<br/>
 
+<br/>
 
 ## Job 2: **Pipeline Declarativo desde la GUI (sin Jenkinsfile)**
 
@@ -189,7 +191,7 @@ pipeline {
 
 <br/>
 
-## Resultado Esperado
+### Resultado Esperado
 
 * La siguiente captura de pantalla muestra el pipeline crud-pipeline-sin-jenkinsfile, el cual fue configurado directamente desde la interfaz gráfica de Jenkins.
 * Es un Job de tipo Pipeline, lo que permite definir múltiples etapas como Clonar, Compilar, Pruebas, directamente desde el editor gráfico de Jenkins.
@@ -200,8 +202,11 @@ pipeline {
 
 ![Jenkins Dashboard](../images/i8.png)
 
+
 <br/>
+
 ---
+
 <br/>
 
 ## Job 3: **Pipeline con Jenkinsfile**
@@ -210,12 +215,14 @@ pipeline {
 
 Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del repositorio.
 
+
 ### Pasos:
 
 1. Jenkins Dashboard > **New Item**
 2. Nombre: `crud-pipeline-con-jenkinsfile`
 3. Tipo: `Pipeline`
 4. Clic en **OK**
+
 
 ### Configuración:
 
@@ -224,6 +231,7 @@ Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del r
 * Repositorio: `https://github.com/NetecGit/TallerDevOpsBancolombia`
 * Branch: `practica1.4/jenkins_jobs_pipelines`
 * Script Path: `Jenkinsfile`
+
 
 ### Contenido sugerido del `Jenkinsfile`:
 
@@ -258,7 +266,8 @@ pipeline {
 
 <br/>
 
-## Verificación de resultados
+
+### Verificación de resultados
 
 Para todos los jobs, valida:
 
@@ -269,7 +278,7 @@ Para todos los jobs, valida:
 <br/>
 
 
-## Resultado Esperado
+### Resultado Esperado
 
 La captura de pantalla siguiente es la vista moderna de Graph View en Jenkins 2.504.1, muestra los resultados de las ejecuciones del pipeline:
 
