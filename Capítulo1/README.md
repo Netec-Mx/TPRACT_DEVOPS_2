@@ -1,41 +1,18 @@
-# Nombre del laboratorio 
+# Capítulo 1: DevOps - Jenkins
 
-## Objetivo de la práctica:
-Al finalizar la práctica, serás capaz de:
-- Objetivo1
-- Objetivo2
-- Objetivo3
 
-## Objetivo Visual 
-Crear un diagrama o imagen que resuma las actividades a realizar, un ejemplo es la siguiente imagen. 
+## Práctica 1.1 Introducción a DevOps
 
-![diagrama1](../images/img1.png)
+[README1_1.md](README1_1.md)
 
-## Duración aproximada:
-- xx minutos.
+## Práctica 1.2 Git & GitHub
 
-## Tabla de ayuda:
-Agregar una tabla con la información que pueda requerir el participante durante el laboratorio, como versión de software, IPs de servers, usuarios y credenciales de acceso.
-| Contraseña | Correo | Código |
-| --- | --- | ---|
-| Netec2024 | edgardo@netec.com | 123abc |
+[README1_2.md](README1_2.md)
 
-## Instrucciones 
-<!-- Proporciona pasos detallados sobre cómo configurar y administrar sistemas, implementar soluciones de software, realizar pruebas de seguridad, o cualquier otro escenario práctico relevante para el campo de la tecnología de la información -->
-### Tarea 1. Descripción de la tarea a realizar.
-Paso 1. Debe de relatar el instructor en verbo infinito, claro y conciso cada actividad para ir construyendo paso a paso en el objetivo de la tarea.
+## Práctica 1.3 Caso de Estudio
 
-Paso 2. <!-- Añadir instrucción -->
+[README1_3.md](README1_3.md)
 
-Paso 3. <!-- Añadir instrucción -->
+## Práctica 1.4 Jenkins - Jobs & Pipelines
 
-### Tarea 2. Descripción de la tarea a realizar.
-Paso 1. Debe de relatar el instructor en verbo infinito, claro y conciso cada actividad para ir construyendo paso a paso en el objetivo de la tarea.
-
-Paso 2. <!-- Añadir instrucción -->
-
-Paso 3. <!-- Añadir instrucción -->
-
-### Resultado esperado
-En esta sección se debe mostrar el resultado esperado de nuestro laboratorio
-![imagen resultado](../images/img3.png)
+[README1_4.md](README1_4.md)
