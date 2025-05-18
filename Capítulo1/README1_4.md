@@ -199,3 +199,78 @@ pipeline {
 <br/>
 
 ![Jenkins Dashboard](../images/i8.png)
+
+<br/>
+---
+<br/>
+
+## Job 3: **Pipeline con Jenkinsfile**
+
+### Objetivo:
+
+Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del repositorio.
+
+### Pasos:
+
+1. Jenkins Dashboard > **New Item**
+2. Nombre: `crud-pipeline-con-jenkinsfile`
+3. Tipo: `Pipeline`
+4. Clic en **OK**
+
+### Configuración:
+
+* En **Pipeline > Definition** selecciona: `Pipeline script from SCM`
+* SCM: `Git`
+* Repositorio: `https://github.com/NetecGit/TallerDevOpsBancolombia`
+* Branch: `practica1.4/jenkins_jobs_pipelines`
+* Script Path: `Jenkinsfile`
+
+### Contenido sugerido del `Jenkinsfile`:
+
+Groovy
+
+```groovy
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Compilar') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+        stage('Pruebas') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+    }
+}
+```
+
+
+* **Guardar y Ejecutar el pipeline**
+
+<br/>
+
+## Verificación de resultados
+
+Para todos los jobs, valida:
+
+* En la consola de Jenkins, salida de consola (`Console Output`)
+* Archivos generados (`target/`)
+* Estado del build (éxito o fallido)
+
+<br/>
+
+
+## Resultado Esperado
+
+La captura de pantalla siguiente es la vista moderna de Graph View en Jenkins 2.504.1, muestra los resultados de las ejecuciones del pipeline:
+
+![Jenkins Stages](../images/i9.png)
