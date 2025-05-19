@@ -1,7 +1,4 @@
-
-
-# Práctica 1.2 - Git & GitHub
-
+# Práctica 1.2. - Git & GitHub
 
 **Repositorio original del Netec(instructor):**
 	* `https://github.com/NetecGit/TallerDevOpsBancolombia`
@@ -12,40 +9,38 @@
 
 <br/>
 
-## Objetivo
+## Objetivo de la práctica:
 
 Al finalizar esta práctica, serás capaz de:
 
-* Configurar tu identidad de Git.
-* Clonar y configurar correctamente un fork de un repositorio.
-* Crear una nueva rama a partir de una rama base (`practica1.2/git_github`).
-* Realizar un cambio en el contenido del repositorio.
-* Hacer commit y push de los cambios a tu propio repositorio remoto.
+- Configurar tu identidad de Git.
+- Clonar y configurar correctamente un fork de un repositorio.
+- Crear una nueva rama a partir de una rama base (`practica1.2/git_github`).
+- Realizar un cambio en el contenido del repositorio.
+- Hacer commit y push de los cambios a tu propio repositorio remoto.
 
+## Duración aproximada:
+- 15 minutos.
 
 ## Requisitos previos
 
-* Tener Git instalado y funcional.
-* Contar con una **cuenta activa en GitHub**.
-* Tener iniciada sesión en GitHub en tu navegador.
-* (Opcional) Tener configurado un **token de acceso personal** (classic) para autenticación HTTPS.
-
-
-
+- Tener Git instalado y funcional.
+- Contar con una **cuenta activa en GitHub**.
+- Tener iniciada tu sesión en GitHub en el navegador.
+- (Opcional) Tener configurado un **token de acceso personal** (classic) para autenticación HTTPS.
 
 ## Instrucciones
 
-
 ### 1. Configura tu identidad de Git
 
-Ejecuta en tu terminal:
+Ejecutar en tu terminal:
 
 ```cmd
 git config --global user.name "Tu Nombre"
 git config --global user.email "tu.correo@ejemplo.com"
 ```
 
-Verifica:
+Verificar:
 
 ```cmd
 git config --list
@@ -54,15 +49,14 @@ git config --list
 
 ### 2. Realiza un fork del repositorio original
 
-1. Abre en el navegador:
+1. Abrir en el navegador:
 	[https://github.com/NetecGit/TallerDevOpsBancolombia](https://github.com/NetecGit/TallerDevOpsBancolombia)
 
-2. Haz clic en **Fork** (arriba a la derecha).
+2. Hacer clic en **Fork** (arriba a la derecha).
 
-3. Nombra tu repositorio como:
+3. Nombrar tu repositorio como:
    `TallerDevOpsBancolombia-<TU_NOMBRE>`
    Ejemplo: `TallerDevOpsBancolombia-Blanca`
-
 
 
 ### 3. Clona tu repositorio forkeado
@@ -72,16 +66,15 @@ git clone https://github.com/<tu-usuario>/TallerDevOpsBancolombia-<TU_NOMBRE>.gi
 cd TallerDevOpsBancolombia-<TU_NOMBRE>
 ```
 
-
 ### 4. Crea una rama local basada en la rama del repositorio original
 
-Primero verifica que `practica1.2/git_github` esté disponible con:
+Verificar que `practica1.2/git_github` esté disponible con:
 
 ```cmd
 git branch -a
 ```
 
-Luego cámbiate a ella:
+Luego cambiarse a ella:
 
 ```cmd
 git switch practica1.2/git_github  
@@ -99,11 +92,9 @@ Ejemplo:
 git checkout -b practica1.2/git_github_Blanca
 ```
 
-
-
 ### 6. Realiza un cambio simple
 
-Edita el archivo `README.md` y agrega al final:
+Editar el archivo `README.md` y agregar al final:
 
 ```markdown
 ## Modificación por <TU_NOMBRE>
@@ -111,8 +102,7 @@ Edita el archivo `README.md` y agrega al final:
 Este cambio fue realizado desde la rama practica1.2/git_github_<TU_NOMBRE> para simular un flujo de integración continua.
 ```
 
-Guarda el archivo.
-
+Guardar el archivo.
 
 ### 7. Verifica el estado de tu repositorio
 
@@ -120,14 +110,12 @@ Guarda el archivo.
 git status
 ```
  
-
 ### 8. Añade y confirma tus cambios
 
 ```cmd
 git add README.md
 git commit -m "Taller DevOps: actualización del README"
 ```
-
 
 ### 9. Sube tu rama al repositorio remoto (tu fork & tu clone)
 
@@ -161,7 +149,7 @@ git log --oneline --graph --all
 
 <br/>
 
-## Resultados Esperados
+## Resultados esperados
 
 * La siguiente captura de pantalla muestra cómo generar un token de acceso clásico y los permisos que deben seleccionarse.
 
@@ -170,7 +158,6 @@ git log --oneline --graph --all
 <br/>
 
 * La siguiente captura de pantalla muestra las ramas disponibles en el repositorio que fue forkeado y posteriormente clonado.
-
 
 ![Tokens](../images/i11.png)
 
