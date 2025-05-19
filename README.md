@@ -1,14 +1,32 @@
-# Taller DevOps
+# Taller Práctico DevOps
 
-## Capítulo 1: DevOps - Jenkins
+**Plataforma de Laboratorios**
 
-* Practica 1.1 Introducción a DevOps
-* Práctica 1.2 Git & GitHub
-* Practica 1.3 Caso de Estudio
-* Práctica 1.4 Jenkins - Jobs & Pipelines
+Bienvenido a la **Plataforma de Laboratorios** del curso **Taller Práctico DevOps**. Aquí podrás explorar diferentes tecnologías a través de prácticas guiadas. ¡Desarrolla tus habilidades y lleva tus conocimientos al siguiente nivel!
 
+---
 
-## Capítulo 2: DevOps - Jenkins Integraciones
+## 🌟 **Lista de Laboratorios**
 
-* Práctica 2.1 Jenkins & Sonarqube
-* Práctica 2.2 Jenkins & Docker
+Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia práctica. Haz clic en los enlaces para comenzar.
+
+---
+ 
+## Índice:
+ - [Practica 1.1 Introducción a DevOps](./Capítulo1/README1_1.md)
+   - ⏱️ **Duración estimada**: 15 minutos.
+
+ - [Práctica 1.2 Git & GitHub](./Capítulo1/README1_2.md)
+   - ⏱️ **Duración estimada**: 15 minutos.
+
+ - [Practica 1.3 Caso de Estudio](./Capítulo1/README1_3.md)
+   - ⏱️ **Duración estimada**: 15 minutos.
+
+ - [Práctica 1.4 Jenkins - Jobs & Pipelines](./Capítulo1/README1_4.md)
+   - ⏱️ **Duración estimada**: 60 minutos.
+
+ - [Práctica 2.1 Jenkins & Sonarqube](./Capítulo2/README2_1.md)
+   - ⏱️ **Duración estimada**: 25 minutos.
+
+ - [Práctica 2.2 Jenkins & Docker](./Capítulo2/README2_2.md)
+   - ⏱️ **Duración estimada**: 80 minutos.
