@@ -1,4 +1,4 @@
-# Práctica 1.1 Introducción a DevOps
+# Práctica 1.1. Introducción a DevOps
 
 <br/>
 
