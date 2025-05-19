@@ -2,10 +2,13 @@
 
 <br/>
 
-## Objetivo
+## Objetivo de la práctica
 
 Al finalizar esta práctica, serás capaz de: 
 - Reafirmar los conceptos fundamentales de DevOps mediante la resolución de un cuestionario diseñado para evaluar tu comprensión sobre su filosofía, principios y beneficios en el ciclo de vida del desarrollo de software.
+
+## Duración aproximada:
+- 15 minutos.
 
 <br/>
 
