@@ -1,6 +1,6 @@
 # Práctica 1.3. Caso de estudio – Servicio RESTful en Spring Boot
 
-## Objetivo de la práctica
+## Objetivo de la práctica:
 Al finalizar esta práctica serás capaz de:
 - Analizar, ejecutar y consumir un servicio RESTful de gestión de clientes implementado con Spring Boot, utilizando herramientas de línea de comandos.
 
