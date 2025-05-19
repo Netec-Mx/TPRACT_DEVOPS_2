@@ -13,15 +13,15 @@ Al finalizar esta práctica serás capaz de:
   
 ## Requisitos previos
 
-### 1. **Jenkins funcionando**
-### 2. **SonarQube ejecutándose localmente**
+1. **Jenkins funcionando.**
+2. **SonarQube ejecutándose localmente.**
 
    * Por ejemplo, desde:
      `C:\software\sonarqube-25.5.0.107428\bin\windows-x86-64\StartSonar.bat`
 	 
-### 3. **Token de usuario de SonarQube**
+3. **Token de usuario de SonarQube.**
 
-### 4. Jenkins debe tener:
+4. **Jenkins debe tener:**
 
    * Plugin **SonarQube Scanner for Jenkins**.
    * Maven configurado en `Global Tool Configuration`.
@@ -32,7 +32,7 @@ Al finalizar esta práctica serás capaz de:
 
 ### Paso 1: Configurar SonarQube en Jenkins
 
-### A. Servidor SonarQube
+### *A. Servidor SonarQube*
 
 1. Ir a: `Manage Jenkins > Configure System`.
 2. Buscar la sección **SonarQube servers**.
@@ -49,7 +49,7 @@ Al finalizar esta práctica serás capaz de:
 
 <br/>
 
-### B. Herramientas 
+### *B. Herramientas*
 
 1. Ir a: `Manage Jenkins > Global Tool Configuration`
 2. En **Maven**, agrega:
@@ -71,9 +71,6 @@ Al finalizar esta práctica serás capaz de:
    * Click en **Generate**
    * Copia el token → lo usarás como credencial en Jenkins
 
-
-<br/>
-
 ## Paso 3: Crear un nuevo Job tipo *Pipeline*
 
 1. En Jenkins, hacer clic en **“New Item”**.
@@ -81,8 +78,6 @@ Al finalizar esta práctica serás capaz de:
 3. Seleccionar: `Pipeline`
 4. Hacer clic en **OK**.
 
-
-<br/>
 
 ## Paso 4: Definir el Pipeline script
 
@@ -96,7 +91,7 @@ pipeline {
   agent any
 
   tools {
-    maven 'MavenAutomatico' // Debe coincidir con el nombre definido en Jenkins si es que lo cambiaste
+    maven 'MavenAutomatico' // Debe coincidir con el nombre definido en Jenkins si es que lo cambiaste.
   }
 
   environment {
@@ -147,9 +142,9 @@ pipeline {
 
 ### Paso 5: Ejecutar el Pipeline
 
-1. Guardar el Job
-2. Hacer clic en **Build Now**
-3. Ir a **Console Output**
+1. Guardar el Job.
+2. Hacer clic en **Build Now**.
+3. Ir a **Console Output**.
 
    * Buscar la línea:
 
@@ -164,41 +159,32 @@ pipeline {
 
   ![SonarQube](../images/i21.png)
 
-<br/>
 
 * Captura que muestra la instalación del plugin **SonarQube Scanner for Jenkins**:
 
   ![Plugin SonarQube - Jenkins](../images/i12.png)
   ![Plugin SonarQube - Jenkins](../images/i13.png)
   
- 
- <br/>
 
 * Captura que muestra la configuración del servidor **SonarQube** en Jenkins:
 
   ![SonarQube - Jenkins](../images/i16.png)
 
-<br/>
 
 * Captura que muestra la configuración de **Maven** en Jenkins:
 
   ![Maven - Jenkins](../images/i17.png)
 
 
-<br/>
-
 * Captura de la **salida de la consola** del pipeline `pipeline-sonarqube`:
 
   ![Console - Jenkins](../images/i18.png)
 
 
-<br/>
-
 * Captura que muestra el **reporte generado por SonarQube**:
 
   ![SonarQube Server Report - Jenkins](../images/i19.png)
 
-<br/>
 
 * Captura que muestra la **ejecución exitosa del pipeline** y el ícono de acceso al reporte de SonarQube:
 
