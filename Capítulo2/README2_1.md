@@ -1,31 +1,30 @@
+# Práctica 2.1 – Jenkins Pipeline y SonarQube 
 
-# Práctica 2.1 – Jenkins Pipeline & SonarQube 
+## Objetivo de la práctica:
+Al finalizar esta práctica serás capaz de:
 
+- Configurar y ejecutar un **Jenkins Pipeline** que:
+  - Clone un repositorio Git.
+  - Compile el proyecto con Maven.
+  - Ejecute análisis de código estático con **SonarQube**.
 
-## Objetivo
-
-Configurar y ejecutar un **Jenkins Pipeline** que:
-
-* Clone un repositorio Git
-* Compile el proyecto con Maven
-* Ejecute análisis de código estático con **SonarQube**
-
-
+## Duración aproximada:
+- 25 minutos.
+  
 ## Requisitos previos
 
-1. **Jenkins funcionando**
-2. **SonarQube ejecutándose localmente**
+### 1. **Jenkins funcionando**
+### 2. **SonarQube ejecutándose localmente**
 
    * Por ejemplo, desde:
      `C:\software\sonarqube-25.5.0.107428\bin\windows-x86-64\StartSonar.bat`
 	 
-3. **Token de usuario de SonarQube**
+### 3. **Token de usuario de SonarQube**
 
-4. Jenkins debe tener:
+### 4. Jenkins debe tener:
 
-   * Plugin **SonarQube Scanner for Jenkins**
-   * Maven configurado en `Global Tool Configuration`
-
+   * Plugin **SonarQube Scanner for Jenkins**.
+   * Maven configurado en `Global Tool Configuration`.
 
 <br/>
 
@@ -35,9 +34,9 @@ Configurar y ejecutar un **Jenkins Pipeline** que:
 
 ### A. Servidor SonarQube
 
-1. Ve a: `Manage Jenkins > Configure System`
-2. Busca sección **SonarQube servers**
-3. Click en **Add SonarQube**
+1. Ir a: `Manage Jenkins > Configure System`.
+2. Buscar la sección **SonarQube servers**.
+3. Hacer clic en **Add SonarQube**.
 
    * **Name**: `SonarQube`
    * **URL**: `http://localhost:9000`
@@ -45,14 +44,14 @@ Configurar y ejecutar un **Jenkins Pipeline** que:
 
      * Tipo: `Secret text`
      * ID sugerido: `sonarqube-token`
-4. Marca: **"Environment variables will be injected..."**
-5. Guarda
+4. Marcar: **"Environment variables will be injected..."**
+5. Guardar.
 
 <br/>
 
 ### B. Herramientas 
 
-1. Ve a: `Manage Jenkins > Global Tool Configuration`
+1. Ir a: `Manage Jenkins > Global Tool Configuration`
 2. En **Maven**, agrega:
 
    * **Name**: `MavenAutomatico`
@@ -63,8 +62,8 @@ Configurar y ejecutar un **Jenkins Pipeline** que:
 
 ## Paso 2: Generar un token de usuario en SonarQube
 
-1. Ve a `http://localhost:9000`
-2. Inicia sesión (admin / Netec_123abc)
+1. Ir a `http://localhost:9000`
+2. Iniciar sesión (admin / Netec_123abc)
 3. Menú superior derecho → **My Account > Security**
 4. En *Generate Tokens*:
 
@@ -75,22 +74,22 @@ Configurar y ejecutar un **Jenkins Pipeline** que:
 
 <br/>
 
-## Paso 3: Crear nuevo Job tipo *Pipeline*
+## Paso 3: Crear un nuevo Job tipo *Pipeline*
 
-1. En Jenkins, haz clic en **“New Item”**
+1. En Jenkins, hacer clic en **“New Item”**.
 2. Nombre del proyecto: `pipeline-sonarqube`
-3. Selecciona: `Pipeline`
-4. Click en **OK**
+3. Seleccionar: `Pipeline`
+4. Hacer clic en **OK**.
 
 
 <br/>
 
 ## Paso 4: Definir el Pipeline script
 
-En la pestaña **Pipeline**, elige:
+En la pestaña **Pipeline**, elegir:
 
 * Definition: **Pipeline script**
-* Script: copia y pega el siguiente bloque Groovy:
+* Script: copiar y pegar el siguiente bloque Groovy:
 
 ```groovy
 pipeline {
@@ -137,7 +136,7 @@ pipeline {
 
 ### Notas:
 
-* Reemplaza:
+* Reemplazar:
 
 	* `https://github.com/usuario/repositorio.git` por la URL de tu fork
 	* `main` por la rama adecuada si estás usando `practica2.1/jenkins_sonarqube`
@@ -148,18 +147,18 @@ pipeline {
 
 ### Paso 5: Ejecutar el Pipeline
 
-1. Guarda el Job
-2. Haz clic en **Build Now**
-3. Ve a **Console Output**
+1. Guardar el Job
+2. Hacer clic en **Build Now**
+3. Ir a **Console Output**
 
-   * Busca la línea:
+   * Buscar la línea:
 
      ```
      ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard?id=mi-proyecto
      ```
 
 
-## Resultado Esperado
+## Resultado esperado
 
 * Captura de pantalla que muestra la salida exitosa al iniciar el servidor de SonarQube.
 
