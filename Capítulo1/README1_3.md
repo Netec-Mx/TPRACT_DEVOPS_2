@@ -14,40 +14,40 @@ Al finalizar esta práctica serás capaz de:
 
 ## Instrucciones
 
-1. **Clonar el repositorio**
+## 1. **Clonar el repositorio**
 
    ```bash
    git clone <URL-del-repositorio>
    cd <nombre-del-repositorio>
    ```
 
-2. **Cambiarse a la rama correspondiente al caso de estudio**
+## 2. **Cambiarse a la rama correspondiente al caso de estudio**
 
    ```bash
    git checkout practica1.3/caso_estudio
    ```
 
-3. **Analizar la estructura del código**
+## 3. **Analizar la estructura del código**
    Revisar la estructura del proyecto y responder las siguientes preguntas:
 
    * ¿Qué clase contiene el punto de entrada de la aplicación?, ¿Qué anotación la identifica como una aplicación Spring Boot?
    * ¿En qué carpeta se encuentran las clases que exponen los endpoints HTTP?
    * ¿Qué estructura de datos se utiliza para almacenar los clientes en memoria?
 
-4. **Ejecutar la aplicación**
+## 4. **Ejecutar la aplicación**
    Asegurarse de tener Maven instalado y ejecutar el siguiente comando:
 
    ```bash
    mvn spring-boot:run
    ```
 
-5. **Verificar la configuración**
+## 5. **Verificar la configuración**
    Revisar el archivo `application.properties` en `src/main/resources` y responder:
 
    * ¿En qué puerto se expone el servicio?
    * ¿Qué implicaciones tendría cambiar este valor?
 
-6. **Consumir el servicio REST**
+## 6. **Consumir el servicio REST**
    Utilizar `curl` para consumir el servicio. Por ejemplo:
 
    ```bash
@@ -55,7 +55,7 @@ Al finalizar esta práctica serás capaz de:
    curl http://localhost:8888/clients/1 | jq .
    ```
 
-7. **Analizar la salida**
+## 7. **Analizar la salida**
 
    * ¿Qué campos contiene cada cliente en la respuesta?
    * ¿Cuál es el endpoint base del servicio?
