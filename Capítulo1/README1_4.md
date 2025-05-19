@@ -1,6 +1,6 @@
 # Práctica 1.4. Jenkins - Jobs y Pipelines
 
-## Objetivos de la práctica:
+## Objetivo de la práctica:
 
 Al finalizar esta práctica, serás capaz de:
 - Crear, configurar y ejecutar Jobs en Jenkins para automatizar tareas de construcción, prueba y despliegue de la aplicación del caso de estudio.
@@ -23,7 +23,6 @@ Credenciales predeterminadas:
 * **Usuario:** `netec`
 * **Contraseña:** `Netec_123`
 
-<br/>
 
 ### 2. Verificar el software adicional desde la consola o terminal
 
@@ -42,7 +41,6 @@ mvn -version
 
 ---
 
-<br/>
 
 ## Job 1: **Estilo Libre (Freestyle Job)**
 
@@ -107,17 +105,12 @@ ls -lh target/*.jar
 
 ![Build Now](../images/i6.png)
 
-<br/>
-
 * La siguiente captura valida que el proyecto fue compilado, probado y empaquetado exitosamente desde Jenkins mediante un Job de estilo libre que ejecuta comandos Maven. Es una evidencia de que Jenkins, Java y Maven están correctamente configurados y el código fuente del caso de estudio está funcional.
 
 ![Build Now](../images/i7.png)
 
-<br/>
 
 ---
-
-<br/>
 
 ## Job 2: **Pipeline Declarativo desde la GUI (sin Jenkinsfile)**
 
@@ -204,12 +197,9 @@ pipeline {
 * Este archivo JAR fue construido correctamente con Maven y almacenado como artefacto del Job.
 * El enlace "view" permite ver o descargar el artefacto directamente desde Jenkins.
 
-<br/>
 
 ![Jenkins Dashboard](../images/i8.png)
 
-
-<br/>
 
 ---
 
@@ -268,9 +258,6 @@ pipeline {
 
 ### **Guardar y ejecutar el pipeline**
 
-<br/>
-
-
 ### Verificación de resultados
 
 Para todos los Jobs, validar:
@@ -278,8 +265,6 @@ Para todos los Jobs, validar:
 * En la consola de Jenkins, salida de consola (`Console Output`).
 * Archivos generados (`target/`).
 * Estado del build (éxito o fallido).
-
-<br/>
 
 
 ### Resultado esperado
