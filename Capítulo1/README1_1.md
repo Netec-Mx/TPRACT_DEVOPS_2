@@ -10,8 +10,6 @@ Al finalizar esta práctica, serás capaz de:
 ## Duración aproximada:
 - 15 minutos.
 
-<br/>
-
 ## Cuestionario
 
 * [Enlace al cuestionario](https://docs.google.com/forms/d/e/1FAIpQLScaPh543RH81Z_ti2ueamwPHTRzh8nK_rbd-nLcc0sCEOSMcw/viewform?usp=header)
