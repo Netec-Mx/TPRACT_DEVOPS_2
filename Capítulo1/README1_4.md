@@ -21,7 +21,7 @@ http://localhost:8080
 Credenciales predeterminadas:
 
 * **Usuario:** `netec`
-* **Contraseña:** `Netec_123`
+* **Contraseña:** `Netec?123`
 
 
 ### 2. Verificar el software adicional desde la consola o terminal
