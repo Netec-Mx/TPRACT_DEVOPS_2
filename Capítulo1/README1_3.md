@@ -1,12 +1,13 @@
-
-
 # Práctica 1.3: Caso de Estudio – Servicio RESTful en Spring Boot
 
-**Objetivo:**
-Analizar, ejecutar y consumir un servicio RESTful de gestión de clientes implementado con Spring Boot, utilizando herramientas de línea de comandos.
+## Objetivo de la práctica
+Al finalizar esta práctica serás capaz de:
+- Analizar, ejecutar y consumir un servicio RESTful de gestión de clientes implementado con Spring Boot, utilizando herramientas de línea de comandos.
 
+## Duración aproximada:
+- 15 minutos.
 
-**Objetivo Visual:**
+## Objetivo visual:
 
 ![Estructura Spring Boot](../images/i3.png)
 
@@ -27,33 +28,32 @@ Analizar, ejecutar y consumir un servicio RESTful de gestión de clientes implem
    ```
 
 3. **Analizar la estructura del código**
-   Revisa la estructura del proyecto y responde las siguientes preguntas:
+   Revisar la estructura del proyecto y responder las siguientes preguntas:
 
-   * ¿Qué clase contiene el punto de entrada de la aplicación? ¿Qué anotación la identifica como una aplicación Spring Boot?
+   * ¿Qué clase contiene el punto de entrada de la aplicación?, ¿Qué anotación la identifica como una aplicación Spring Boot?
    * ¿En qué carpeta se encuentran las clases que exponen los endpoints HTTP?
    * ¿Qué estructura de datos se utiliza para almacenar los clientes en memoria?
 
 4. **Ejecutar la aplicación**
-   Asegúrate de tener Maven instalado y ejecuta el siguiente comando:
+   Asegurarse de tener Maven instalado y ejecutar el siguiente comando:
 
    ```bash
    mvn spring-boot:run
    ```
 
 5. **Verificar la configuración**
-   Revisa el archivo `application.properties` en `src/main/resources` y responde:
+   Revisar el archivo `application.properties` en `src/main/resources` y responder:
 
    * ¿En qué puerto se expone el servicio?
    * ¿Qué implicaciones tendría cambiar este valor?
 
 6. **Consumir el servicio REST**
-   Utiliza `curl` para consumir el servicio. Por ejemplo:
+   Utilizar `curl` para consumir el servicio. Por ejemplo:
 
    ```bash
    curl http://localhost:8888/clients | jq .
    curl http://localhost:8888/clients/1 | jq .
    ```
-
 
 7. **Analizar la salida**
 
@@ -69,14 +69,14 @@ Analizar, ejecutar y consumir un servicio RESTful de gestión de clientes implem
 
 <br/>
 
-## Resultado Esperado
+## Resultado esperado
 
 La siguiente captura de pantalla muestra dos comandos ejecutados desde la terminal utilizando curl para consumir el servicio RESTful del caso de estudio:
 
-Primera solicitud: curl http://localhost:8888/clients | jq .
+**Primera solicitud: curl http://localhost:8888/clients | jq .**
 Esta instrucción realiza una petición HTTP GET al endpoint /clients, obteniendo como respuesta un arreglo JSON con todos los clientes registrados en memoria.
 
-Segunda solicitud: curl http://localhost:8888/clients/1 | jq .
+**Segunda solicitud: curl http://localhost:8888/clients/1 | jq .**
 Esta instrucción realiza una petición GET al endpoint /clients/1, devolviendo un único objeto JSON correspondiente al cliente con idClient igual a 1.
 
 <br/>
@@ -84,7 +84,6 @@ Esta instrucción realiza una petición GET al endpoint /clients/1, devolviendo 
 ![curl & jq](../images/i2.png)
 
 <br/>
-
 
 ### Ejecución alternativa del servicio
 
