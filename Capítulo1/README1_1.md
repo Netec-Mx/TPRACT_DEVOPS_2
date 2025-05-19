@@ -1,7 +1,5 @@
 # Práctica 1.1. Introducción a DevOps
 
-<br/>
-
 ## Objetivo de la práctica
 
 Al finalizar esta práctica, serás capaz de: 
