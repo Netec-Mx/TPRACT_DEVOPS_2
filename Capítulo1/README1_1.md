@@ -1,11 +1,11 @@
-
 # Práctica 1.1 Introducción a DevOps
 
 <br/>
 
 ## Objetivo
 
-Al finalizar esta práctica, serás capaz de reafirmar los conceptos fundamentales de DevOps mediante la resolución de un cuestionario diseñado para evaluar tu comprensión sobre su filosofía, principios y beneficios en el ciclo de vida del desarrollo de software.
+Al finalizar esta práctica, serás capaz de: 
+- Reafirmar los conceptos fundamentales de DevOps mediante la resolución de un cuestionario diseñado para evaluar tu comprensión sobre su filosofía, principios y beneficios en el ciclo de vida del desarrollo de software.
 
 <br/>
 
@@ -17,7 +17,7 @@ Al finalizar esta práctica, serás capaz de reafirmar los conceptos fundamental
 
 ## Instrucciones
 
-1. Lee cada pregunta cuidadosamente antes de responder.
+1. Leer cada pregunta cuidadosamente antes de responder.
 2. Algunas preguntas son de opción múltiple, verdadero/falso o con varias respuestas correctas.
 3. Este cuestionario lo puedes realizar desde un dispositivo móvil o contestarlo mas tarde en caso de que no tengas acceso.
 4. Responde con sinceridad para que podamos adaptar mejor el taller a tus necesidades.
