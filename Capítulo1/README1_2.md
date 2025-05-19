@@ -31,7 +31,7 @@ Al finalizar esta práctica, serás capaz de:
 
 ## Instrucciones
 
-### 1. Configura tu identidad de Git
+### 1. Configurar tu identidad de Git
 
 Ejecutar en tu terminal:
 
@@ -47,7 +47,7 @@ git config --list
 ```
 
 
-### 2. Realiza un fork del repositorio original
+### 2. Realizar un fork del repositorio original
 
 1. Abrir en el navegador:
 	[https://github.com/NetecGit/TallerDevOpsBancolombia](https://github.com/NetecGit/TallerDevOpsBancolombia)
@@ -59,14 +59,14 @@ git config --list
    Ejemplo: `TallerDevOpsBancolombia-Blanca`
 
 
-### 3. Clona tu repositorio forkeado
+### 3. Clonar tu repositorio forkeado
 
 ```cmd
 git clone https://github.com/<tu-usuario>/TallerDevOpsBancolombia-<TU_NOMBRE>.git
 cd TallerDevOpsBancolombia-<TU_NOMBRE>
 ```
 
-### 4. Crea una rama local basada en la rama del repositorio original
+### 4. Crear una rama local basada en la rama del repositorio original
 
 Verificar que `practica1.2/git_github` esté disponible con:
 
@@ -80,7 +80,7 @@ Luego cambiarse a ella:
 git switch practica1.2/git_github  
 ```
 
-### 5. Crea una nueva rama de trabajo basada en la anterior
+### 5. Crear una nueva rama de trabajo basada en la anterior
 
 ```cmd
 git checkout -b practica1.2/git_github_<TU_NOMBRE>
@@ -92,7 +92,7 @@ Ejemplo:
 git checkout -b practica1.2/git_github_Blanca
 ```
 
-### 6. Realiza un cambio simple
+### 6. Realizar un cambio simple
 
 Editar el archivo `README.md` y agregar al final:
 
@@ -104,20 +104,20 @@ Este cambio fue realizado desde la rama practica1.2/git_github_<TU_NOMBRE> para 
 
 Guardar el archivo.
 
-### 7. Verifica el estado de tu repositorio
+### 7. Verificar el estado de tu repositorio
 
 ```cmd
 git status
 ```
  
-### 8. Añade y confirma tus cambios
+### 8. Añadir y confirmar tus cambios
 
 ```cmd
 git add README.md
 git commit -m "Taller DevOps: actualización del README"
 ```
 
-### 9. Sube tu rama al repositorio remoto (tu fork & tu clone)
+### 9. Subir tu rama al repositorio remoto (tu fork & tu clone)
 
 ```cmd
 git push 
@@ -131,7 +131,7 @@ git push
 5. Elige el tipo "Personal access token (classic)" con permisos de `repo`.
 
 
-### 10. Verifica el historial
+### 10. Verificar el historial
 
 ```cmd
 git log
