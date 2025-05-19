@@ -1,4 +1,4 @@
-# Práctica 1.3: Caso de Estudio – Servicio RESTful en Spring Boot
+# Práctica 1.3. Caso de estudio – Servicio RESTful en Spring Boot
 
 ## Objetivo de la práctica
 Al finalizar esta práctica serás capaz de:
