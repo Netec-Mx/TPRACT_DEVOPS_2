@@ -52,9 +52,9 @@ mvn -version
 
 ### Pasos:
 
-1. Ir a **Jenkins Dashboard > New Item**.
+1. Ir a **Jenkins Dashboard > New Item**
 2. Escribir un nombre como: `crud-freestyle-job`
-3. Seleccionar **Freestyle project**.
+3. Seleccionar **Freestyle project**
 4. Hacer clic en **OK**.
 
 ### Configuración:
@@ -193,7 +193,7 @@ pipeline {
 
 ```
 
-* **Guardar y ejecutar el pipeline**
+### Guardar y ejecutar el pipeline
 
 <br/>
 
@@ -229,7 +229,6 @@ pipeline {
 3. Tipo: `Pipeline`
 4. Hacer clic en **OK**.
 
-
 ### Configuración:
 
 * En **Pipeline > Definition** selecciona: `Pipeline script from SCM`
@@ -237,7 +236,6 @@ pipeline {
 * Repositorio: `https://github.com/NetecGit/TallerDevOpsBancolombia`
 * Branch: `practica1.4/jenkins_jobs_pipelines`
 * Script Path: `Jenkinsfile`
-
 
 ### Contenido sugerido del `Jenkinsfile`:
 
@@ -268,7 +266,7 @@ pipeline {
 ```
 
 
-* **Guardar y ejecutar el pipeline**
+### **Guardar y ejecutar el pipeline**
 
 <br/>
 
