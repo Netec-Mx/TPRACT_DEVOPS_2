@@ -1,4 +1,4 @@
-# Práctica 2.1 – Jenkins Pipeline y SonarQube 
+# Práctica 2.1. Jenkins Pipeline y SonarQube 
 
 ## Objetivo de la práctica:
 Al finalizar esta práctica serás capaz de:
