@@ -20,5 +20,5 @@ Al finalizar esta práctica, serás capaz de:
 2. Algunas preguntas son de opción múltiple, verdadero/falso o con varias respuestas correctas.
 3. Este cuestionario lo puedes realizar desde un dispositivo móvil o contestarlo mas tarde en caso de que no tengas acceso.
 4. Responde con sinceridad para que podamos adaptar mejor el taller a tus necesidades.
-5. Al finalizar, haz clic en Enviar para registrar tus respuestas.  
+5. Al finalizar, hacer clic en **Enviar** para registrar tus respuestas.  
 
