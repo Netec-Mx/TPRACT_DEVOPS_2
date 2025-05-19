@@ -1,4 +1,4 @@
-# Práctica 1.2. - Git y GitHub
+# Práctica 1.2. Git y GitHub
 
 **Repositorio original del Netec(instructor):**
 	* `https://github.com/NetecGit/TallerDevOpsBancolombia`
