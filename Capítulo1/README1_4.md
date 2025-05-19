@@ -1,12 +1,18 @@
+# Práctica 1.4. Jenkins - Jobs y Pipelines
 
-# Práctica 1.4 Jenkins - Jobs & Pipelines
+## Objetivos de la práctica:
 
+Al finalizar esta práctica, serás capaz de:
+- Crear, configurar y ejecutar Jobs en Jenkins para automatizar tareas de construcción, prueba y despliegue de la aplicación del caso de estudio.
 
+## Duración aproximada:
+- 60 minutos.
+  
 ## **Preparativos antes de crear los Jobs**
 
 ### 1. Verificar que Jenkins esté funcionando
 
-Desde un navegador, accede a:
+Desde un navegador, acceder a:
 
 ```
 http://localhost:8080
@@ -19,7 +25,7 @@ Credenciales predeterminadas:
 
 <br/>
 
-### 2. Verificar software adicional desde consola o terminal
+### 2. Verificar el software adicional desde la consola o terminal
 
 #### Verificar Java:
 
@@ -42,26 +48,26 @@ mvn -version
 
 ### Objetivo de este Job:
 
-Clonar el repositorio, compilar el proyecto y mostrar el JAR generado.
+- Clonar el repositorio, compilar el proyecto y mostrar el JAR generado.
 
 ### Pasos:
 
-1. Ve a **Jenkins Dashboard > New Item**
-2. Escribe un nombre como: `crud-freestyle-job`
-3. Selecciona **Freestyle project**
-4. Clic en **OK**
+1. Ir a **Jenkins Dashboard > New Item**.
+2. Escribir un nombre como: `crud-freestyle-job`
+3. Seleccionar **Freestyle project**.
+4. Hacer clic en **OK**.
 
 ### Configuración:
 
-* **Sección: Source Code Management**
+### **Sección: Source Code Management**
 
   * Tipo: `Git`
   * Repositorio: `https://github.com/usuario/mi-repo.git`
   * Branch: `*/practica1.4/jenkins_jobs_pipelines`
 
-* **Sección: Build**
+### **Sección: Build**
 
-  * Agrega un step de tipo: `Execute Windows batch command` y escribe:
+  * Agregar un step de tipo: `Execute Windows batch command` y escribir:
 
 ```cmd
 echo "Compilando proyecto con Maven"
@@ -71,20 +77,20 @@ echo "Mostrando JAR generado:"
 ls -lh target/*.jar
 ```
 
-* **Guardar y ejecutar el Job**
+### **Guardar y ejecutar el Job**
 
 <br/>
 
 
-### Resultado Esperado
+### Resultado esperado
 
-* La siguiente captura muestra la interfaz principal de Jenkins tras iniciar sesión como el usuario netec.Además, se confirma que Jenkins está correctamente instalado y corriendo en http://localhost:8080.
+* La siguiente captura muestra la interfaz principal de Jenkins tras iniciar sesión como el usuario Netec. Además, se confirma que Jenkins está correctamente instalado y corriendo en http://localhost:8080.
 
   ![Jenkins](../images/i4.png)
 
 <br/>
 
-* La siguiente captura de pantall muestra como desde la terminal de Windows se confirma que el entorno cuenta con Java JDK 17.0.6 & Apache Maven 3.8.1.  
+* La siguiente captura de pantalla muestra como desde la terminal de Windows se confirma que el entorno cuenta con Java JDK 17.0.6 & Apache Maven 3.8.1.  
 
 ![](../images/i5.png)
 
@@ -103,7 +109,7 @@ ls -lh target/*.jar
 
 <br/>
 
-* La siguiente captura valida que el proyecto fue compilado, probado y empaquetado exitosamente desde Jenkins mediante un job de estilo libre que ejecuta comandos Maven. Es una evidencia de que Jenkins, Java y Maven están correctamente configurados y el código fuente del caso de estudio está funcional.
+* La siguiente captura valida que el proyecto fue compilado, probado y empaquetado exitosamente desde Jenkins mediante un Job de estilo libre que ejecuta comandos Maven. Es una evidencia de que Jenkins, Java y Maven están correctamente configurados y el código fuente del caso de estudio está funcional.
 
 ![Build Now](../images/i7.png)
 
@@ -117,7 +123,7 @@ ls -lh target/*.jar
 
 ### Objetivo:
 
-Clonar, compilar, ejecutar pruebas unitarias y empaquetar el caso de estudio usando pasos declarativos en la GUI.
+- Clonar, compilar, ejecutar pruebas unitarias y empaquetar el caso de estudio usando pasos declarativos en la GUI.
 
 
 ### Pasos:
@@ -125,7 +131,7 @@ Clonar, compilar, ejecutar pruebas unitarias y empaquetar el caso de estudio usa
 1. Jenkins Dashboard > **New Item**
 2. Nombre: `crud-pipeline-sin-jenkinsfile`
 3. Tipo: `Pipeline`
-4. Clic en **OK**
+4. Hacer clic en **OK**.
 
 ### Pipeline Script (en la GUI):
 
@@ -187,15 +193,15 @@ pipeline {
 
 ```
 
-* **Guardar y Ejecutar el pipeline**
+* **Guardar y ejecutar el pipeline**
 
 <br/>
 
-### Resultado Esperado
+### Resultado esperado
 
 * La siguiente captura de pantalla muestra el pipeline crud-pipeline-sin-jenkinsfile, el cual fue configurado directamente desde la interfaz gráfica de Jenkins.
 * Es un Job de tipo Pipeline, lo que permite definir múltiples etapas como Clonar, Compilar, Pruebas, directamente desde el editor gráfico de Jenkins.
-* Este archivo JAR fue construido correctamente con Maven y almacenado como artefacto del job.
+* Este archivo JAR fue construido correctamente con Maven y almacenado como artefacto del Job.
 * El enlace "view" permite ver o descargar el artefacto directamente desde Jenkins.
 
 <br/>
@@ -213,7 +219,7 @@ pipeline {
 
 ### Objetivo:
 
-Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del repositorio.
+- Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del repositorio.
 
 
 ### Pasos:
@@ -221,7 +227,7 @@ Ejecutar el mismo pipeline anterior pero basado en un `Jenkinsfile` dentro del r
 1. Jenkins Dashboard > **New Item**
 2. Nombre: `crud-pipeline-con-jenkinsfile`
 3. Tipo: `Pipeline`
-4. Clic en **OK**
+4. Hacer clic en **OK**.
 
 
 ### Configuración:
@@ -262,23 +268,23 @@ pipeline {
 ```
 
 
-* **Guardar y Ejecutar el pipeline**
+* **Guardar y ejecutar el pipeline**
 
 <br/>
 
 
 ### Verificación de resultados
 
-Para todos los jobs, valida:
+Para todos los Jobs, validar:
 
-* En la consola de Jenkins, salida de consola (`Console Output`)
-* Archivos generados (`target/`)
-* Estado del build (éxito o fallido)
+* En la consola de Jenkins, salida de consola (`Console Output`).
+* Archivos generados (`target/`).
+* Estado del build (éxito o fallido).
 
 <br/>
 
 
-### Resultado Esperado
+### Resultado esperado
 
 La captura de pantalla siguiente es la vista moderna de Graph View en Jenkins 2.504.1, muestra los resultados de las ejecuciones del pipeline:
 
