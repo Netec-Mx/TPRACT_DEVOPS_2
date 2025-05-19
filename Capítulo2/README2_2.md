@@ -37,12 +37,10 @@ Instalar los siguientes plugins desde el panel de administración de Jenkins (`A
 * Tipo: Username with password (token personal como password)
 * ID: `github-credentials`
 
-<br/>
 
 ### **2. Crear Dockerfile en la rama `practica2.2/jenkins-docker`**
 
-Agregar un `Dockerfile` para contener la aplicación.  
-
+Agregar un `Dockerfile` para contener la aplicación:
 
 ```Dockerfile
 FROM openjdk:17-jdk-slim
@@ -51,8 +49,6 @@ COPY target/app.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
-
-<br/>
 
 ### **3. Crear Jenkinsfile en la misma rama**
 
@@ -114,9 +110,6 @@ pipeline {
 
 > Reemplaza `<nombre-usuario>/<app-jenkins-docker>` y la URL del repo con los valores reales.
 
-
-<br/>
-
 ### **4. Crear un nuevo Job tipo Pipeline**
 
 1. Entrar al panel principal de Jenkins.
@@ -124,7 +117,6 @@ pipeline {
 3. Asignar un nombre, por ejemplo: `deploy-app-docker`.
 4. Seleccionar la opción **"Pipeline"** y presionar **OK**.
 
-<br/>
 
 ### **5. Configurar el Job**
 
@@ -146,9 +138,8 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
 * **Branch:** `practica2.2/jenkins-docker`.
 * **Script Path:** `Jenkinsfile` (si está en la raíz; cambia si está en otra carpeta).
 
-<br/>
 
-### **6. Guardar y Ejecutar**
+### **6. Guardar y ejecutar**
 
 1. Hacer clic en **Guardar**.
 2. Desde el dashboard del Job, hacer clic en **"Construir ahora"**.
@@ -160,47 +151,29 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
    * Eliminación del contenedor anterior.
    * Despliegue de la nueva versión de la app.
 
-
-<br/>
-
 ### **7. Verifica el despliegue**
 
 * Ejecutar: `docker ps` en el servidor para confirmar que el contenedor está corriendo.
 * Abrir el navegador en `http://localhost:8888` (o el puerto definido) para acceder a la app.
 
 
-<br/>
-
 ## Resultado esperado 
-
-
-<br/>
 
 * Captura de pantalla que muestra la lista de plugins relacionados con Docker. En esta práctica se utiliza el plugin Docker Pipeline (Build and use Docker containers from pipelines).
 
 ![Docker Plugins](../images/i22.png)
 
-<br/>
-
 * Captura de pantalla que muestra el detalle de la instalación del plugin Docker Pipeline.
 
 ![Docker Plugins](../images/i23.png)
-
-
-<br/>
 
 * Captura de pantalla que muestra el inicio del Job de Jenkins.
 
 ![Docker Plugins](../images/i24.png)
 
-<br/>
-
 * Captura de pantalla que muestra cómo, desde la consola del Job, se inicia la construcción de la imagen Docker utilizando el Dockerfile ubicado en la raíz del repositorio.
 
 ![Docker Plugins](../images/i25.png)
-
-
-<br/>
 
 * Captura que muestra la **consola de ejecución de un Pipeline en Jenkins**, correspondiente al Job llamado `deploy-app-docker`, ejecución #5. Se observan tres eventos destacados:
 
@@ -208,24 +181,23 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
 2. La ejecución exitosa del comando `docker run`, que **lanza un nuevo contenedor** a partir de la imagen `blankiss/app-jenkins-docker`, mapeando el puerto **8888 del host al 8080 del contenedor**.
 3. El pipeline finaliza con el estado **"SUCCESS"**, indicando que **el despliegue fue exitoso**.
 
-
 ![Docker Plugins](../images/i26.png)
-
-<br/>
 
 * Captura que muestra una terminal de Windows en la que se verifica el estado de ejecución de un contenedor Docker con una aplicación Spring Boot. A continuación se describen los elementos clave:
 
 1. **Listado de imágenes Docker**: Se confirma la existencia de la imagen `blankiss/app-jenkins-docker`, construida recientemente.
+
 2. **Contenedor en ejecución**: El contenedor `app-container` se encuentra activo y ejecutando el comando `java -jar app.jar`. Está escuchando en el puerto **8888**.
+
 3. **Salida de logs del contenedor**: Se observa el arranque exitoso de una aplicación Spring Boot (`CrudClientsApplication`), que utiliza Tomcat y se inicia en el puerto **8888**, sin errores.
+
 4. **Inspección del contenedor**: Se valida que el puerto expuesto y mapeado es el **8888**, tanto internamente como hacia el host.
+
 5. **Verificación con `netstat`**: Se comprueba que el sistema operativo está escuchando en el puerto **8888**, lo cual indica que el servicio está disponible para recibir conexiones externas.
 
 
 ![Docker Plugins](../images/i28.png)
 
-
-<br/>
 
 * Captura de pantalla que muestra la respuesta exitosa del endpoint /clients, indicando que la aplicación desplegada con Docker está funcionando correctamente y devolviendo datos en formato JSON.
 
