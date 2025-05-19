@@ -1,10 +1,14 @@
 
-# Práctica 2.2: Jenkins & Docker
+# Práctica 2.2. Jenkins y Docker
 
-## Objetivo
+## Objetivo de la práctica:
 
-Automatizar el proceso de despliegue de una aplicación contenida en Docker mediante un Pipeline de Jenkins, a partir del código fuente alojado en GitHub (rama `practica2.2/jenkins-docker`).
+Al finalizar esta práctica serás capaz de:
 
+- Automatizar el proceso de despliegue de una aplicación contenida en Docker mediante un Pipeline de Jenkins, a partir del código fuente alojado en GitHub (rama `practica2.2/jenkins-docker`).
+
+## Duración aproximada:
+- 80 minutos.
 
 ## **Requisitos previos**
 
@@ -14,26 +18,21 @@ Automatizar el proceso de despliegue de una aplicación contenida en Docker medi
 4. El repositorio del caso de estudio debe estar accesible (en GitHub, rama: `practica2.2/jenkins-docker`).
 5. Credenciales configuradas en Jenkins para acceder a GitHub si el repositorio es privado.
 
-
 ## **Plugins necesarios en Jenkins**
 
-Instala los siguientes plugins desde el panel de administración de Jenkins (`Administrar Jenkins > Administrar Plugins`):
+Instalar los siguientes plugins desde el panel de administración de Jenkins (`Administrar Jenkins > Administrar Plugins`):
 
 1. **Docker Pipeline**
 2. **Git plugin**
 3. **Pipeline**
 4. **Credentials Binding Plugin**
 
-<br/>
 
 > En la máquina virtual proporcionada para el Taller DevOps, únicamente resta instalar el primer plugin.
 
-<br/>
-
-
 ## **Instrucciones**
 
-### 1. **Agregar credencial para GitHub (si es privado)**
+### 1. **Agregar la credencial para GitHub (si es privado)**
 
 * Tipo: Username with password (token personal como password)
 * ID: `github-credentials`
@@ -42,7 +41,7 @@ Instala los siguientes plugins desde el panel de administración de Jenkins (`Ad
 
 ### **2. Crear Dockerfile en la rama `practica2.2/jenkins-docker`**
 
-Agrega un `Dockerfile` para contener la aplicación.  
+Agregar un `Dockerfile` para contener la aplicación.  
 
 
 ```Dockerfile
@@ -120,11 +119,10 @@ pipeline {
 
 ### **4. Crear un nuevo Job tipo Pipeline**
 
-1. Entra al panel principal de Jenkins.
-2. Haz clic en **"Nuevo Item"**.
-3. Asigna un nombre, por ejemplo: `deploy-app-docker`.
-4. Selecciona la opción **"Pipeline"** y presiona **OK**.
-
+1. Entrar al panel principal de Jenkins.
+2. Hacer clic en **"Nuevo Item"**.
+3. Asignar un nombre, por ejemplo: `deploy-app-docker`.
+4. Seleccionar la opción **"Pipeline"** y presionar **OK**.
 
 <br/>
 
@@ -132,7 +130,7 @@ pipeline {
 
 #### Sección **General**
 
-* (Opcional) Marca la casilla **"Este proyecto está parametrizado"** si deseas parámetros como nombre del contenedor, puerto, etc.
+* (Opcional) Marcar la casilla **"Este proyecto está parametrizado"** si deseas parámetros como nombre del contenedor, puerto, etc.
 
 #### Sección **Gestión de código fuente**
 
@@ -152,9 +150,9 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
 
 ### **6. Guardar y Ejecutar**
 
-1. Haz clic en **Guardar**.
-2. Desde el dashboard del job, haz clic en **"Construir ahora"**.
-3. Observa la consola para verificar:
+1. Hacer clic en **Guardar**.
+2. Desde el dashboard del Job, hacer clic en **"Construir ahora"**.
+3. Observar la consola para verificar:
 
    * Clonación del repo.
    * Compilación (`mvn package`).
@@ -167,13 +165,13 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
 
 ### **7. Verifica el despliegue**
 
-* Ejecuta: `docker ps` en el servidor para confirmar que el contenedor está corriendo.
-* Abre el navegador en `http://localhost:8888` (o el puerto definido) para acceder a la app.
+* Ejecutar: `docker ps` en el servidor para confirmar que el contenedor está corriendo.
+* Abrir el navegador en `http://localhost:8888` (o el puerto definido) para acceder a la app.
 
 
 <br/>
 
-## Resultado Esperado 
+## Resultado esperado 
 
 
 <br/>
@@ -191,7 +189,7 @@ No es necesario configurar aquí el repositorio si lo defines en el `Jenkinsfile
 
 <br/>
 
-* Captura de pantalla que muestra el inicio del Job de Jenkins
+* Captura de pantalla que muestra el inicio del Job de Jenkins.
 
 ![Docker Plugins](../images/i24.png)
 
